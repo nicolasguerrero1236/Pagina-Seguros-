@@ -783,3 +783,41 @@ section h2 {
 .whatsapp-float:hover img {
     transform: rotate(10deg);
 }
+
+
+
+/* ====== RESPONSIVE NAVBAR ====== */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem; /* reduce el tamaño del texto */
+    white-space: normal; /* permite que se divida en 2 líneas */
+    line-height: 1;
+    text-align: left;
+    max-width: 160px; /* evita que se superponga */
+  }
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-nav {
+    background: linear-gradient(90deg, #004a99, #007bff);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar-nav .nav-link {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+}

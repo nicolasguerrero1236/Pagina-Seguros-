@@ -802,40 +802,47 @@ body {
   padding-top: 90px; /* da espacio debajo del navbar */
 }
 
-/* Ajustes de marca y menú en móvil */
+/* ====== NAVBAR MOBILE FIX ====== */
 @media (max-width: 991px) {
+  /* Ajusta el contenedor para alinear correctamente */
+  .navbar .container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Hace que el nombre no se corte */
   .navbar-brand {
     font-size: 1.2rem !important;
     white-space: normal !important;
     line-height: 1.3;
-    text-align: center;
+    text-align: left;
     max-width: 200px;
   }
 
+  /* Alinea el botón hamburguesa a la derecha */
   .navbar-toggler {
-    order: 2; /* mueve el botón hamburguesa a la derecha */
+    order: 2;
     margin-left: auto;
   }
 
+  /* El menú desplegable ocupa todo el ancho debajo del nav */
   .navbar-collapse {
-    order: 3;
     width: 100%;
-  }
-
-  .navbar .container {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  .navbar-nav {
     text-align: center;
     background-color: #004a99;
     border-radius: 10px;
     padding: 10px 0;
+    margin-top: 10px;
   }
 
   .navbar-nav .nav-item {
-    margin: 5px 0;
+    margin: 6px 0;
+  }
+
+  /* Evita que el hero quede tapado */
+  body {
+    padding-top: 85px;
   }
 }
 
